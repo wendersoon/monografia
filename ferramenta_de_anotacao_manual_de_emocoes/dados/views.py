@@ -2,6 +2,8 @@ from django.views.generic import TemplateView
 from django.shortcuts import render, redirect
 from django.views import View
 from .models import Text, Avaliação
+
+#Leitura do arquivo para o banco de dados
 # import csv
 
 # def add_csv_to_db(csv_file_path):
@@ -11,7 +13,7 @@ from .models import Text, Avaliação
 #             text = row['tweet_text'] 
 #             Text.objects.create(text=text)
 
-# add_csv_to_db('dados/tweets_pre_avalicao.csv')
+# add_csv_to_db('/home/wendersom/Desktop/monografia/monografia/tweets_pre_avalicao.csv')
 
 class HomeView(TemplateView):
     template_name = 'home.html'
