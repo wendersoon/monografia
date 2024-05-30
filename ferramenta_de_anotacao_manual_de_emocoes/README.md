@@ -1,0 +1,1 @@
+# ferramenta_de_anotacao_manual_de_emocoes

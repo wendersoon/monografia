@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .small-font {
+        font-size: 0.8rem; /* Ajuste o valor conforme necessário */
+    }
+    .custom-table {
+        width: 30%; 
+        margin: auto;
+    }
+</style>
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+<form method="post" class="w-50">
+    {% csrf_token %}
+    <h3 class="text-center fs-2 mb-5 card">FERRAMENTA DE ANOTAÇÃO MANUAL DE EMOÇÕES</h3>
+    <hr>
+    <h3 class="text-center fs-5"><span class="fw-light">FRASE:</span>{{ text.text }}</h3>
+    <input type="hidden" name="text_id" value="{{ text.id }}">
+    
+    <hr>
+    
+    <fieldset class="row mb-3 justify-content-center align-items-center">
+      <legend class="col-form-label col-sm-2 pt-0">SELECIONE UMA EMOÇÃO</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="alegria" value="alegria">
+          <label class="form-check-label" for="alegria">
+            Alegria
+          </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="raiva" value="raiva" >
+            <label class="form-check-label" for="raiva">
+              Raiva
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="tristeza" value="tristeza" >
+            <label class="form-check-label" for="tristeza">
+              Tristeza
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="medo" value="medo" >
+            <label class="form-check-label" for="medo">
+              Medo
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="nojo" value="nojo" >
+            <label class="form-check-label" for="nojo">
+              Nojo
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="surpresa" value="surpresa" >
+            <label class="form-check-label" for="surpresa">
+              Surpresa
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="neutro" value="neutro" >
+            <label class="form-check-label" for="neutro">
+              Neutro
+            </label>
+        </div>
+      </div>
+    </fieldset>
+    <hr>
+    <fieldset class="row mb-3">
+        <legend class="col-form-label col-sm-2 pt-0">FOI DIFICÍL REALIZAR A CLASSIFICAÇÃO? </legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="dificil" id="dificil" value="dificil" >
+            <label class="form-check-label" for="dificil">
+              SIM
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    <div class="container text-center mt-5">
+        <button type="submit" class="btn btn-success btn-lg mx-auto fw-bold">AVALIAR</button>
+    </div>  
+</form>
+</div>  
+{% endblock content %}

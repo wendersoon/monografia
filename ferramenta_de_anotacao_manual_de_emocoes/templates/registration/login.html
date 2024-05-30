@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center vh-100">
+        <div class="col-8 text-center">
+            <div class="mx-auto">
+                    <p class="lead mb-4 display-3 fw-bold">Login</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <form method="post">{% csrf_token %}
+                        {{ form|crispy }}
+                        <button type='submit' class="btn btn-success btn-lg px-4">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+{% endblock content %}
