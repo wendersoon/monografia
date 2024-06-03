@@ -519,25 +519,3 @@ for i in df_avaliador1['Text']:
       iguais['g'] += 1
 
 print(iguais)
-
-from sklearn.metrics import cohen_kappa_score
-
-# Supondo que df seja o seu DataFrame
-df_avaliador1 = df[df['User'] == 'avaliador_1']
-df_avaliador2 = df[df['User'] == 'avaliador_2']
-
-emotions = ['Alegria', 'Raiva', 'Tristeza', 'Medo', 'Nojo', 'Surpresa', 'Neutro']
-kappa_scores = {}
-
-for emotion in emotions:
-    # Obter as classificações de ambos os avaliadores para a emoção atual
-    ratings_avaliador1 = df_avaliador1[emotion].values
-    ratings_avaliador2 = df_avaliador2[emotion].values
-
-    # Calcular o coeficiente de Kappa
-    kappa = cohen_kappa_score(ratings_avaliador1, ratings_avaliador2)
-    kappa_scores[emotion] = kappa
-
-# Exibir os resultados
-for emotion, kappa in kappa_scores.items():
-    print(f"Emoção: {emotion}, Coeficiente de Kappa: {kappa:.3f}")
