@@ -22,7 +22,9 @@ class Avaliação(models.Model):
     nojo            = models.BooleanField('Nojo', default=False)
     surpresa        = models.BooleanField('Surpresa', default=False)
     neutro          = models.BooleanField('Neutro', default=False)
-    foi_dificil     = models.BooleanField('Foi Difícil?', default=False)
+    foi_dificil     = models.BooleanField('Difícil', default=False)
+    facil           = models.BooleanField('Fácil', default=False)
+    nenhum_nem_outro= models.BooleanField('Mais ou Menos', default=False)
 
     class Meta:
         unique_together = ('user', 'text',)

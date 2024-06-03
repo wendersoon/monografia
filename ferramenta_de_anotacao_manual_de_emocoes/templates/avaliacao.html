@@ -16,7 +16,7 @@
     {% csrf_token %}
     <h3 class="text-center fs-2 mb-5 card">FERRAMENTA DE ANOTAÇÃO MANUAL DE EMOÇÕES</h3>
     <hr>
-    <h3 class="text-center fs-5"><span class="fw-light">FRASE:</span>{{ text.text }}</h3>
+    <h3 class="text-center fs-5"><span class="fw-light">FRASE: </span>{{ text.text }}</h3>
     <input type="hidden" name="text_id" value="{{ text.id }}">
     
     <hr>
@@ -25,43 +25,43 @@
       <legend class="col-form-label col-sm-2 pt-0">SELECIONE UMA EMOÇÃO</legend>
       <div class="col-sm-10">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="alegria" value="alegria">
+          <input class="form-check-input border-black" type="radio" name="gridRadios" id="alegria" value="alegria">
           <label class="form-check-label" for="alegria">
             Alegria
           </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="raiva" value="raiva" >
+            <input class="form-check-input border-black" type="radio" name="gridRadios" id="raiva" value="raiva" >
             <label class="form-check-label" for="raiva">
               Raiva
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="tristeza" value="tristeza" >
+            <input class="form-check-input border-black" type="radio" name="gridRadios" id="tristeza" value="tristeza" >
             <label class="form-check-label" for="tristeza">
               Tristeza
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="medo" value="medo" >
+            <input class="form-check-input border-black" type="radio" name="gridRadios" id="medo" value="medo" >
             <label class="form-check-label" for="medo">
               Medo
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="nojo" value="nojo" >
+            <input class="form-check-input border-black" type="radio" name="gridRadios" id="nojo" value="nojo" >
             <label class="form-check-label" for="nojo">
               Nojo
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="surpresa" value="surpresa" >
+            <input class="form-check-input border-black" type="radio" name="gridRadios" id="surpresa" value="surpresa" >
             <label class="form-check-label" for="surpresa">
               Surpresa
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="neutro" value="neutro" >
+            <input class="form-check-input border-black" type="radio" name="gridRadios" id="neutro" value="neutro" >
             <label class="form-check-label" for="neutro">
               Neutro
             </label>
@@ -70,12 +70,24 @@
     </fieldset>
     <hr>
     <fieldset class="row mb-3">
-        <legend class="col-form-label col-sm-2 pt-0">FOI DIFICÍL REALIZAR A CLASSIFICAÇÃO? </legend>
+        <legend class="col-form-label col-sm-2 pt-0">NÍVEL DE DIFICULDADE</legend>
         <div class="col-sm-10">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="dificil" id="dificil" value="dificil" >
+            <input class="form-check-input border-black" type="radio" name="gridRadios2" id="facil" value="facil" >
+            <label class="form-check-label" for="facil">
+              Fácil
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input border-black" type="radio" name="gridRadios2" id="nenhum" value="nenhum" >
+            <label class="form-check-label" for="nenhum">
+              Mais ou Menos
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input border-black" type="radio" name="gridRadios2" id="dificil" value="dificil" >
             <label class="form-check-label" for="dificil">
-              SIM
+              Difícil
             </label>
           </div>
         </div>
